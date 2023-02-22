@@ -19,7 +19,7 @@ jobs:
           key: npm-${{ hashFiles('package-lock.json') }}
           restore-keys: npm-
       - name: Install dependencies
-        run: npm run postinstall
+        run: npm ci
       - name: Build
         run: npm run client:build
         env:
